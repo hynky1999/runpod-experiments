@@ -11,4 +11,5 @@ flash-attn
 trl
 accelerate
 huggingface-hub
-
+randomname
+python-dotenv

@@ -1,5 +1,5 @@
 # Model arguments
-model_name_or_path: codellama/Codellama-7b-Instruct-hf
+model_name_or_path: codellama/CodeLlama-7b-Instruct-hf
 torch_dtype: auto
 use_flash_attention_2: true
 
@@ -37,7 +37,7 @@ logging_steps: 5
 logging_strategy: steps
 lr_scheduler_type: cosine
 max_seq_length: 2048
-max_steps: 960
+max_steps: 900
 num_train_epochs: 1
 output_dir: /workspace/s3/hf/experiments/codellama-7b-sft-lora-func-names
 overwrite_output_dir: true

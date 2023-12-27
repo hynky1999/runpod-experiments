@@ -13,11 +13,17 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+# Make sure to do this before importing anything from transformers
+import os
+from dotenv import load_dotenv
+load_dotenv()
+
 """
 Supervised fine-tuning script for decoder language models.
 """
 from sklearn.metrics import f1_score
 from transformers.trainer_utils import EvalPrediction
+import randomname
 def cp_metrics(eval: EvalPrediction):
     # Compute the argmax logits
     predicted_logits = eval.predictions.argmax(axis=-1).cpu()
@@ -61,8 +67,13 @@ def main():
 
     # Set seed for reproducibility
     set_seed(training_args.seed)
+    print(os.environ.get("HF_HOME"))
 
     accelerator = Accelerator()
+
+    run_name = randomname.get_name()
+    training_args.run_name = run_name
+    training_args.output_dir = os.path.join(training_args.output_dir, run_name)
 
     ###############
     # Setup logging
