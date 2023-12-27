@@ -1,0 +1,23 @@
+  0%|                                                                                                                                                                        | 0/2 [00:00<?, ?it/s]/workspace/venv/lib/python3.10/site-packages/trl/trainer/utils.py:570: UserWarning: The dataset reached end and the iterator is reset to the start.
+  warnings.warn("The dataset reached end and the iterator is reset to the start.")
+[WARNING|logging.py:314] 2023-12-27 03:47:50,213 >> You're using a CodeLlamaTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+[rank0]:[2023-12-27 03:47:50,295] [0/0] torch._dynamo.variables.torch: [WARNING] Profiler function <class 'torch.autograd.profiler.record_function'> will be ignored
+ 50%|████████████████████████████████████████████████████████████████████████████████                                                                                | 1/2 [00:30<00:30, 30.51s/it][INFO|trainer.py:2881] 2023-12-27 03:48:18,914 >> Saving model checkpoint to /workspace/s3/hf/experiments/codellama-7b-sft-lora-func-names/checkpoint-1
+[INFO|tokenization_utils_base.py:2428] 2023-12-27 03:48:19,477 >> tokenizer config file saved in /workspace/s3/hf/experiments/codellama-7b-sft-lora-func-names/checkpoint-1/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2437] 2023-12-27 03:48:19,478 >> Special tokens file saved in /workspace/s3/hf/experiments/codellama-7b-sft-lora-func-names/checkpoint-1/special_tokens_map.json
+{'loss': 1.5394, 'learning_rate': 4e-05, 'epoch': 0.0}
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:56<00:00, 27.87s/it][INFO|trainer.py:2881] 2023-12-27 03:48:44,941 >> Saving model checkpoint to /workspace/s3/hf/experiments/codellama-7b-sft-lora-func-names/checkpoint-2
+[INFO|tokenization_utils_base.py:2428] 2023-12-27 03:48:45,525 >> tokenizer config file saved in /workspace/s3/hf/experiments/codellama-7b-sft-lora-func-names/checkpoint-2/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2437] 2023-12-27 03:48:45,525 >> Special tokens file saved in /workspace/s3/hf/experiments/codellama-7b-sft-lora-func-names/checkpoint-2/special_tokens_map.json
+[INFO|trainer.py:3158] 2023-12-27 03:48:47,159 >> ***** Running Evaluation *****
+[INFO|trainer.py:3160] 2023-12-27 03:48:47,159 >>   Num examples = 2000
+[INFO|trainer.py:3163] 2023-12-27 03:48:47,159 >>   Batch size = 1
+
+
+
+
+
+
+
+
+

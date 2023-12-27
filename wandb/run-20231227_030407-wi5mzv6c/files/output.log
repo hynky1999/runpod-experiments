@@ -1,0 +1,64 @@
+
+  0%|                                                                                                                                                                       | 0/31 [00:00<?, ?it/s][WARNING|logging.py:314] 2023-12-27 03:04:08,441 >> You're using a CodeLlamaTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+  3%|█████▏                                                                                                                                                         | 1/31 [00:27<13:59, 27.97s/it]
+
+
+ 10%|███████████████▍                                                                                                                                               | 3/31 [01:15<11:29, 24.61s/it]
+{'train_runtime': 88.8938, 'train_samples_per_second': 5.625, 'train_steps_per_second': 0.349, 'train_loss': 1.697563370068868, 'epoch': 0.1}
+***** train metrics *****
+  epoch                    =        0.1
+  train_loss               =     1.6976
+  train_runtime            = 0:01:28.89
+  train_samples            =        500
+  train_samples_per_second =      5.625
+  train_steps_per_second   =      0.349
+ 10%|███████████████▍                                                                                                                                               | 3/31 [01:15<11:29, 24.61s/it][INFO|trainer.py:1955] 2023-12-27 03:05:35,488 >>
+Training completed. Do not forget to share your model on huggingface.co/models =)
+ 10%|███████████████▍                                                                                                                                               | 3/31 [01:27<13:33, 29.04s/it]
+[INFO|trainer.py:3158] 2023-12-27 03:05:35,492 >> ***** Running Evaluation *****
+[INFO|trainer.py:3160] 2023-12-27 03:05:35,492 >>   Num examples = 500
+[INFO|trainer.py:3163] 2023-12-27 03:05:35,492 >>   Batch size = 4
+
+
+  2%|███▊                                                                                                                                                          | 3/125 [00:03<02:52,  1.42s/it]Traceback (most recent call last):
+  File "/workspace/runpod-experiments/scripts/run_sft.py", line 206, in <module>
+    main()
+  File "/workspace/runpod-experiments/scripts/run_sft.py", line 172, in main
+    metrics = trainer.evaluate()
+  File "/workspace/venv/lib/python3.10/site-packages/transformers/trainer.py", line 3011, in evaluate
+    output = eval_loop(
+  File "/workspace/venv/lib/python3.10/site-packages/transformers/trainer.py", line 3200, in evaluation_loop
+    loss, logits, labels = self.prediction_step(model, inputs, prediction_loss_only, ignore_keys=ignore_keys)
+  File "/workspace/venv/lib/python3.10/site-packages/transformers/trainer.py", line 3419, in prediction_step
+    loss, outputs = self.compute_loss(model, inputs, return_outputs=True)
+  File "/workspace/venv/lib/python3.10/site-packages/transformers/trainer.py", line 2748, in compute_loss
+    outputs = model(**inputs)
+  File "/workspace/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/workspace/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/workspace/venv/lib/python3.10/site-packages/accelerate/utils/operations.py", line 636, in forward
+    return model_forward(*args, **kwargs)
+  File "/workspace/venv/lib/python3.10/site-packages/accelerate/utils/operations.py", line 624, in __call__
+    return convert_to_fp32(self.model_forward(*args, **kwargs))
+  File "/workspace/venv/lib/python3.10/site-packages/torch/amp/autocast_mode.py", line 16, in decorate_autocast
+    return func(*args, **kwargs)
+  File "/workspace/venv/lib/python3.10/site-packages/peft/peft_model.py", line 1003, in forward
+    return self.base_model(
+  File "/workspace/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/workspace/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/workspace/venv/lib/python3.10/site-packages/peft/tuners/tuners_utils.py", line 106, in forward
+    return self.model.forward(*args, **kwargs)
+  File "/workspace/venv/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py", line 1066, in forward
+    loss = loss_fct(shift_logits, shift_labels)
+  File "/workspace/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/workspace/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/workspace/venv/lib/python3.10/site-packages/torch/nn/modules/loss.py", line 1179, in forward
+    return F.cross_entropy(input, target, weight=self.weight,
+  File "/workspace/venv/lib/python3.10/site-packages/torch/nn/functional.py", line 3053, in cross_entropy
+    return torch._C._nn.cross_entropy_loss(input, target, weight, _Reduction.get_enum(reduction), ignore_index, label_smoothing)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 1002.00 MiB. GPU 0 has a total capacty of 23.69 GiB of which 564.69 MiB is free. Process 304578 has 23.13 GiB memory in use. Of the allocated memory 20.99 GiB is allocated by PyTorch, and 1.83 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF

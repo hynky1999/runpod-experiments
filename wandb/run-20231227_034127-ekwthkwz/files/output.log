@@ -1,0 +1,89 @@
+  0%|                                                                                                                                                                      | 0/960 [00:00<?, ?it/s]/workspace/venv/lib/python3.10/site-packages/trl/trainer/utils.py:570: UserWarning: The dataset reached end and the iterator is reset to the start.
+  warnings.warn("The dataset reached end and the iterator is reset to the start.")
+[WARNING|logging.py:314] 2023-12-27 03:41:30,140 >> You're using a CodeLlamaTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+{'loss': 1.5394, 'learning_rate': 4.1666666666666667e-07, 'epoch': 0.0}
+
+  0%|▎                                                                                                                                                           | 2/960 [00:53<6:58:44, 26.23s/it]Traceback (most recent call last):
+  File "/workspace/runpod-experiments/scripts/run_sft.py", line 203, in <module>
+    main()
+  File "/workspace/runpod-experiments/scripts/run_sft.py", line 156, in main
+    train_result = trainer.train()
+  File "/workspace/venv/lib/python3.10/site-packages/trl/trainer/sft_trainer.py", line 280, in train
+    output = super().train(*args, **kwargs)
+  File "/workspace/venv/lib/python3.10/site-packages/transformers/trainer.py", line 1546, in train
+    return inner_training_loop(
+  File "/workspace/venv/lib/python3.10/site-packages/transformers/trainer.py", line 1860, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs)
+  File "/workspace/venv/lib/python3.10/site-packages/transformers/trainer.py", line 2725, in training_step
+    loss = self.compute_loss(model, inputs)
+  File "/workspace/venv/lib/python3.10/site-packages/transformers/trainer.py", line 2748, in compute_loss
+    outputs = model(**inputs)
+  File "/workspace/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/workspace/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/workspace/venv/lib/python3.10/site-packages/torch/_dynamo/eval_frame.py", line 328, in _fn
+    return fn(*args, **kwargs)
+  File "/workspace/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/workspace/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/workspace/venv/lib/python3.10/site-packages/accelerate/utils/operations.py", line 636, in forward
+    return model_forward(*args, **kwargs)
+  File "/workspace/venv/lib/python3.10/site-packages/accelerate/utils/operations.py", line 624, in __call__
+    return convert_to_fp32(self.model_forward(*args, **kwargs))
+  File "/workspace/venv/lib/python3.10/site-packages/torch/amp/autocast_mode.py", line 16, in decorate_autocast
+    return func(*args, **kwargs)
+  File "/workspace/venv/lib/python3.10/site-packages/peft/peft_model.py", line 1003, in forward
+    return self.base_model(
+  File "/workspace/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/workspace/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/workspace/venv/lib/python3.10/site-packages/peft/tuners/tuners_utils.py", line 106, in forward
+    return self.model.forward(*args, **kwargs)
+  File "/workspace/venv/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py", line 1034, in forward
+    outputs = self.model(
+  File "/workspace/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/workspace/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/workspace/venv/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py", line 912, in forward
+    layer_outputs = self._gradient_checkpointing_func(
+  File "/workspace/venv/lib/python3.10/site-packages/torch/_compile.py", line 24, in inner
+    return torch._dynamo.disable(fn, recursive)(*args, **kwargs)
+  File "/workspace/venv/lib/python3.10/site-packages/torch/_dynamo/eval_frame.py", line 328, in _fn
+    return fn(*args, **kwargs)
+  File "/workspace/venv/lib/python3.10/site-packages/torch/_dynamo/external_utils.py", line 17, in inner
+    return fn(*args, **kwargs)
+  File "/workspace/venv/lib/python3.10/site-packages/torch/utils/checkpoint.py", line 458, in checkpoint
+    ret = function(*args, **kwargs)
+  File "/workspace/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/workspace/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/workspace/venv/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py", line 672, in forward
+    hidden_states, self_attn_weights, present_key_value = self.self_attn(
+  File "/workspace/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/workspace/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/workspace/venv/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py", line 464, in forward
+    value_states = self.v_proj(hidden_states)
+  File "/workspace/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/workspace/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/workspace/venv/lib/python3.10/site-packages/peft/tuners/lora/layer.py", line 317, in forward
+    result += lora_B(lora_A(dropout(x))) * scaling
+  File "/workspace/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/workspace/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/workspace/venv/lib/python3.10/site-packages/torch/nn/modules/dropout.py", line 58, in forward
+    return F.dropout(input, self.p, self.training, self.inplace)
+  File "/workspace/venv/lib/python3.10/site-packages/torch/nn/functional.py", line 1266, in dropout
+    return _VF.dropout_(input, p, training) if inplace else _VF.dropout(input, p, training)
+  File "/workspace/venv/lib/python3.10/site-packages/torch/utils/checkpoint.py", line 1047, in pack_hook
+    def pack_hook(x):
+KeyboardInterrupt

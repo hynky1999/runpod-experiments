@@ -1,0 +1,43 @@
+  0%|                                                                                                                                                                        | 0/2 [00:00<?, ?it/s]/workspace/venv/lib/python3.10/site-packages/trl/trainer/utils.py:570: UserWarning: The dataset reached end and the iterator is reset to the start.
+  warnings.warn("The dataset reached end and the iterator is reset to the start.")
+[WARNING|logging.py:314] 2023-12-27 03:39:01,602 >> You're using a CodeLlamaTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+[rank0]:[2023-12-27 03:39:01,686] [0/0] torch._dynamo.variables.torch: [WARNING] Profiler function <class 'torch.autograd.profiler.record_function'> will be ignored
+ 50%|████████████████████████████████████████████████████████████████████████████████                                                                                | 1/2 [00:30<00:30, 30.65s/it][INFO|trainer.py:2881] 2023-12-27 03:39:30,293 >> Saving model checkpoint to /workspace/s3/hf/experiments/codellama-7b-sft-lora-func-names/checkpoint-1
+[INFO|tokenization_utils_base.py:2428] 2023-12-27 03:39:30,740 >> tokenizer config file saved in /workspace/s3/hf/experiments/codellama-7b-sft-lora-func-names/checkpoint-1/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2437] 2023-12-27 03:39:30,740 >> Special tokens file saved in /workspace/s3/hf/experiments/codellama-7b-sft-lora-func-names/checkpoint-1/special_tokens_map.json
+{'loss': 1.5394, 'learning_rate': 4e-05, 'epoch': 0.0}
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:55<00:00, 27.42s/it][INFO|trainer.py:2881] 2023-12-27 03:39:55,445 >> Saving model checkpoint to /workspace/s3/hf/experiments/codellama-7b-sft-lora-func-names/checkpoint-2
+[INFO|tokenization_utils_base.py:2428] 2023-12-27 03:39:55,892 >> tokenizer config file saved in /workspace/s3/hf/experiments/codellama-7b-sft-lora-func-names/checkpoint-2/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2437] 2023-12-27 03:39:55,892 >> Special tokens file saved in /workspace/s3/hf/experiments/codellama-7b-sft-lora-func-names/checkpoint-2/special_tokens_map.json
+[INFO|trainer.py:1955] 2023-12-27 03:39:57,076 >>
+Training completed. Do not forget to share your model on huggingface.co/models =)
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:57<00:00, 28.72s/it]
+[INFO|trainer.py:3158] 2023-12-27 03:39:57,083 >> ***** Running Evaluation *****
+[INFO|trainer.py:3160] 2023-12-27 03:39:57,083 >>   Num examples = 2000
+[INFO|trainer.py:3163] 2023-12-27 03:39:57,083 >>   Batch size = 1
+{'train_runtime': 59.2383, 'train_samples_per_second': 0.54, 'train_steps_per_second': 0.034, 'train_loss': 1.5384307503700256, 'epoch': 0.0}
+***** train metrics *****
+  epoch                    =        0.0
+  train_loss               =     1.5384
+  train_runtime            = 0:00:59.23
+  train_samples            =      10000
+  train_samples_per_second =       0.54
+  train_steps_per_second   =      0.034
+2023-12-27 03:39:57 - INFO - __main__ - *** Evaluate ***
+
+
+
+  1%|█                                                                                                                                                           | 13/2000 [00:06<19:24,  1.71it/s]Traceback (most recent call last):
+  File "/workspace/runpod-experiments/scripts/run_sft.py", line 206, in <module>
+    main()
+  File "/workspace/runpod-experiments/scripts/run_sft.py", line 172, in main
+    metrics = trainer.evaluate()
+  File "/workspace/venv/lib/python3.10/site-packages/transformers/trainer.py", line 3011, in evaluate
+    output = eval_loop(
+  File "/workspace/venv/lib/python3.10/site-packages/transformers/trainer.py", line 3226, in evaluation_loop
+    preds_host = logits if preds_host is None else nested_concat(preds_host, logits, padding_index=-100)
+  File "/workspace/venv/lib/python3.10/site-packages/transformers/trainer_pt_utils.py", line 123, in nested_concat
+    return torch_pad_and_concatenate(tensors, new_tensors, padding_index=padding_index)
+  File "/workspace/venv/lib/python3.10/site-packages/transformers/trainer_pt_utils.py", line 82, in torch_pad_and_concatenate
+    return torch.cat((tensor1, tensor2), dim=0)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 3.42 GiB. GPU 0 has a total capacty of 23.69 GiB of which 3.23 GiB is free. Process 349967 has 20.45 GiB memory in use. Of the allocated memory 18.24 GiB is allocated by PyTorch, and 1.75 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF

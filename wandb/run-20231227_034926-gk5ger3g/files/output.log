@@ -1,0 +1,175 @@
+  0%|                                                                                                                                                                        | 0/2 [00:00<?, ?it/s]/workspace/venv/lib/python3.10/site-packages/trl/trainer/utils.py:570: UserWarning: The dataset reached end and the iterator is reset to the start.
+  warnings.warn("The dataset reached end and the iterator is reset to the start.")
+[WARNING|logging.py:314] 2023-12-27 03:49:29,558 >> You're using a CodeLlamaTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+[rank0]:[2023-12-27 03:49:29,642] [0/0] torch._dynamo.variables.torch: [WARNING] Profiler function <class 'torch.autograd.profiler.record_function'> will be ignored
+ 50%|████████████████████████████████████████████▌                                            | 1/2 [00:30<00:30, 30.79s/it][INFO|trainer.py:2881] 2023-12-27 03:49:58,481 >> Saving model checkpoint to /workspace/s3/hf/experiments/codellama-7b-sft-lora-func-names/checkpoint-1
+[INFO|tokenization_utils_base.py:2428] 2023-12-27 03:49:59,076 >> tokenizer config file saved in /workspace/s3/hf/experiments/codellama-7b-sft-lora-func-names/checkpoint-1/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2437] 2023-12-27 03:49:59,077 >> Special tokens file saved in /workspace/s3/hf/experiments/codellama-7b-sft-lora-func-names/checkpoint-1/special_tokens_map.json
+{'loss': 1.5394, 'learning_rate': 4e-05, 'epoch': 0.0}
+100%|█████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:56<00:00, 28.05s/it][INFO|trainer.py:2881] 2023-12-27 03:50:24,621 >> Saving model checkpoint to /workspace/s3/hf/experiments/codellama-7b-sft-lora-func-names/checkpoint-2
+[INFO|tokenization_utils_base.py:2428] 2023-12-27 03:50:25,206 >> tokenizer config file saved in /workspace/s3/hf/experiments/codellama-7b-sft-lora-func-names/checkpoint-2/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2437] 2023-12-27 03:50:25,207 >> Special tokens file saved in /workspace/s3/hf/experiments/codellama-7b-sft-lora-func-names/checkpoint-2/special_tokens_map.json
+[INFO|trainer.py:3158] 2023-12-27 03:50:26,814 >> ***** Running Evaluation *****
+[INFO|trainer.py:3160] 2023-12-27 03:50:26,814 >>   Num examples = 2000
+[INFO|trainer.py:3163] 2023-12-27 03:50:26,815 >>   Batch size = 4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 12%|██████████▍                                                                           | 61/500 [01:54<14:06,  1.93s/it]
+Training completed. Do not forget to share your model on huggingface.co/models =)
+100%|█████████████████████████████████████████████████████████████████████████████████████████| 2/2 [02:57<00:00, 88.64s/it]
+[INFO|trainer.py:3158] 2023-12-27 03:52:24,983 >> ***** Running Evaluation *****
+[INFO|trainer.py:3160] 2023-12-27 03:52:24,983 >>   Num examples = 2000
+[INFO|trainer.py:3163] 2023-12-27 03:52:24,983 >>   Batch size = 4
+{'eval_loss': 1.2635648250579834, 'eval_runtime': 118.1644, 'eval_samples_per_second': 16.926, 'eval_steps_per_second': 4.231, 'epoch': 0.0}
+{'train_runtime': 179.0955, 'train_samples_per_second': 0.179, 'train_steps_per_second': 0.011, 'train_loss': 1.5384307503700256, 'epoch': 0.0}
+***** train metrics *****
+  epoch                    =        0.0
+  train_loss               =     1.5384
+  train_runtime            = 0:02:59.09
+  train_samples            =      10000
+  train_samples_per_second =      0.179
+  train_steps_per_second   =      0.011
+2023-12-27 03:52:24 - INFO - __main__ - *** Evaluate ***
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  8%|██████▋                                                                               | 39/500 [01:13<14:47,  1.93s/it]Traceback (most recent call last):
+  File "/workspace/runpod-experiments/scripts/run_sft.py", line 202, in <module>
+    main()
+  File "/workspace/runpod-experiments/scripts/run_sft.py", line 168, in main
+    metrics = trainer.evaluate()
+  File "/workspace/venv/lib/python3.10/site-packages/transformers/trainer.py", line 3011, in evaluate
+    output = eval_loop(
+  File "/workspace/venv/lib/python3.10/site-packages/transformers/trainer.py", line 3200, in evaluation_loop
+    loss, logits, labels = self.prediction_step(model, inputs, prediction_loss_only, ignore_keys=ignore_keys)
+  File "/workspace/venv/lib/python3.10/site-packages/transformers/trainer.py", line 3419, in prediction_step
+    loss, outputs = self.compute_loss(model, inputs, return_outputs=True)
+  File "/workspace/venv/lib/python3.10/site-packages/transformers/trainer.py", line 2748, in compute_loss
+    outputs = model(**inputs)
+  File "/workspace/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/workspace/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/workspace/venv/lib/python3.10/site-packages/accelerate/utils/operations.py", line 636, in forward
+    return model_forward(*args, **kwargs)
+  File "/workspace/venv/lib/python3.10/site-packages/accelerate/utils/operations.py", line 624, in __call__
+    return convert_to_fp32(self.model_forward(*args, **kwargs))
+  File "/workspace/venv/lib/python3.10/site-packages/torch/amp/autocast_mode.py", line 16, in decorate_autocast
+    return func(*args, **kwargs)
+  File "/workspace/venv/lib/python3.10/site-packages/peft/peft_model.py", line 1003, in forward
+    return self.base_model(
+  File "/workspace/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/workspace/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/workspace/venv/lib/python3.10/site-packages/peft/tuners/tuners_utils.py", line 106, in forward
+    return self.model.forward(*args, **kwargs)
+  File "/workspace/venv/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py", line 1034, in forward
+    outputs = self.model(
+  File "/workspace/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/workspace/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/workspace/venv/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py", line 922, in forward
+    layer_outputs = decoder_layer(
+  File "/workspace/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/workspace/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/workspace/venv/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py", line 685, in forward
+    hidden_states = self.post_attention_layernorm(hidden_states)
+  File "/workspace/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/workspace/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/workspace/venv/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py", line 106, in forward
+    hidden_states = hidden_states * torch.rsqrt(variance + self.variance_epsilon)
+KeyboardInterrupt

@@ -5,3 +5,10 @@ transformers
 wandb
 torch
 jinja2
+scikit-learn
+git+https://github.com/huggingface/alignment-handbook.git#egg=alignment-handbook
+flash-attn
+trl
+accelerate
+huggingface-hub
+

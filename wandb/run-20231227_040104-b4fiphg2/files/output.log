@@ -1,0 +1,102 @@
+  0%|                                                                                                 | 0/2 [00:00<?, ?it/s]/workspace/venv/lib/python3.10/site-packages/trl/trainer/utils.py:570: UserWarning: The dataset reached end and the iterator is reset to the start.
+  warnings.warn("The dataset reached end and the iterator is reset to the start.")
+[WARNING|logging.py:314] 2023-12-27 04:01:07,378 >> You're using a CodeLlamaTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+[rank0]:[2023-12-27 04:01:07,462] [0/0] torch._dynamo.variables.torch: [WARNING] Profiler function <class 'torch.autograd.profiler.record_function'> will be ignored
+ 50%|████████████████████████████████████████████▌                                            | 1/2 [00:30<00:30, 30.50s/it][INFO|trainer.py:3158] 2023-12-27 04:01:35,934 >> ***** Running Evaluation *****
+[INFO|trainer.py:3160] 2023-12-27 04:01:35,934 >>   Num examples = 10
+[INFO|trainer.py:3163] 2023-12-27 04:01:35,934 >>   Batch size = 4
+ 50%|████████████████████████████████████████████▌                                            | 1/2 [00:31<00:30, 30.50s/it][INFO|trainer.py:2881] 2023-12-27 04:01:36,901 >> Saving model checkpoint to /workspace/s3/hf/experiments/codellama-7b-sft-lora-func-names/checkpoint-1
+{'loss': 1.5394, 'learning_rate': 4e-05, 'epoch': 0.0}
+{'eval_loss': 1.346835732460022, 'eval_runtime': 0.966, 'eval_samples_per_second': 10.352, 'eval_steps_per_second': 3.106, 'epoch': 0.0}
+[INFO|tokenization_utils_base.py:2428] 2023-12-27 04:01:37,534 >> tokenizer config file saved in /workspace/s3/hf/experiments/codellama-7b-sft-lora-func-names/checkpoint-1/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2437] 2023-12-27 04:01:37,535 >> Special tokens file saved in /workspace/s3/hf/experiments/codellama-7b-sft-lora-func-names/checkpoint-1/special_tokens_map.json
+100%|█████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:57<00:00, 28.44s/it][INFO|trainer.py:3158] 2023-12-27 04:02:02,925 >> ***** Running Evaluation *****
+[INFO|trainer.py:3160] 2023-12-27 04:02:02,925 >>   Num examples = 10
+[INFO|trainer.py:3163] 2023-12-27 04:02:02,925 >>   Batch size = 4
+  0%|                                                                                                 | 0/3 [00:00<?, ?it/s]
+[INFO|tokenization_utils_base.py:2428] 2023-12-27 04:02:04,078 >> tokenizer config file saved in /workspace/s3/hf/experiments/codellama-7b-sft-lora-func-names/checkpoint-2/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2437] 2023-12-27 04:02:04,078 >> Special tokens file saved in /workspace/s3/hf/experiments/codellama-7b-sft-lora-func-names/checkpoint-2/special_tokens_map.json
+{'train_runtime': 62.1952, 'train_samples_per_second': 0.515, 'train_steps_per_second': 0.032, 'train_loss': 1.5384307503700256, 'epoch': 0.0}
+***** train metrics *****
+  epoch                    =        0.0
+  train_loss               =     1.5384
+  train_runtime            = 0:01:02.19
+  train_samples            =      10000
+  train_samples_per_second =      0.515
+  train_steps_per_second   =      0.032
+2023-12-27 04:02:05 - INFO - __main__ - *** Evaluate ***
+[INFO|trainer.py:1955] 2023-12-27 04:02:05,782 >>
+Training completed. Do not forget to share your model on huggingface.co/models =)
+100%|█████████████████████████████████████████████████████████████████████████████████████████| 2/2 [01:00<00:00, 30.18s/it]
+[INFO|trainer.py:3158] 2023-12-27 04:02:05,790 >> ***** Running Evaluation *****
+[INFO|trainer.py:3160] 2023-12-27 04:02:05,790 >>   Num examples = 10
+[INFO|trainer.py:3163] 2023-12-27 04:02:05,790 >>   Batch size = 4
+ 33%|█████████████████████████████▋                                                           | 1/3 [00:00<00:00,  4.89it/s]
+[INFO|trainer.py:2881] 2023-12-27 04:02:06,322 >> Saving model checkpoint to /workspace/s3/hf/experiments/codellama-7b-sft-lora-func-names
+[INFO|tokenization_utils_base.py:2428] 2023-12-27 04:02:07,003 >> tokenizer config file saved in /workspace/s3/hf/experiments/codellama-7b-sft-lora-func-names/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2437] 2023-12-27 04:02:07,004 >> Special tokens file saved in /workspace/s3/hf/experiments/codellama-7b-sft-lora-func-names/special_tokens_map.json
+[INFO|trainer.py:2881] 2023-12-27 04:02:07,036 >> Saving model checkpoint to /workspace/s3/hf/experiments/codellama-7b-sft-lora-func-names
+***** eval metrics *****
+  epoch                   =        0.0
+  eval_loss               =     1.1951
+  eval_runtime            = 0:00:00.52
+  eval_samples            =         10
+  eval_samples_per_second =     18.876
+  eval_steps_per_second   =      5.663
+2023-12-27 04:02:06 - INFO - __main__ - *** Save model ***
+[INFO|tokenization_utils_base.py:2428] 2023-12-27 04:02:07,656 >> tokenizer config file saved in /workspace/s3/hf/experiments/codellama-7b-sft-lora-func-names/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2437] 2023-12-27 04:02:07,656 >> Special tokens file saved in /workspace/s3/hf/experiments/codellama-7b-sft-lora-func-names/special_tokens_map.json
+training_args.bin: 100%|███████████████████████████████████████████████████████████████| 4.73k/4.73k [00:00<00:00, 7.65kB/s]
+Upload 2 LFS files:   0%|                                                                             | 0/2 [00:00<?, ?it/s]
+adapter_model.safetensors:   4%|██▏                                                     | 21.4M/537M [00:02<00:55, 9.23MB/s]Traceback (most recent call last):
+  File "/workspace/venv/lib/python3.10/site-packages/tqdm/contrib/concurrent.py", line 51, in _executor_map
+    return list(tqdm_class(ex.map(fn, *iterables, chunksize=chunksize), **kwargs))
+  File "/workspace/venv/lib/python3.10/site-packages/tqdm/std.py", line 1182, in __iter__
+    for obj in iterable:
+  File "/usr/lib/python3.10/concurrent/futures/_base.py", line 621, in result_iterator
+    yield _result_or_cancel(fs.pop())
+  File "/usr/lib/python3.10/concurrent/futures/_base.py", line 319, in _result_or_cancel
+    return fut.result(timeout)
+  File "/usr/lib/python3.10/concurrent/futures/_base.py", line 453, in result
+    self._condition.wait(timeout)
+  File "/usr/lib/python3.10/threading.py", line 320, in wait
+    waiter.acquire()
+KeyboardInterrupt
+During handling of the above exception, another exception occurred:
+Traceback (most recent call last):
+  File "/workspace/runpod-experiments/scripts/run_sft.py", line 202, in <module>
+    main()
+  File "/workspace/runpod-experiments/scripts/run_sft.py", line 178, in main
+    trainer.save_model(training_args.output_dir)
+  File "/workspace/venv/lib/python3.10/site-packages/transformers/trainer.py", line 2847, in save_model
+    self.push_to_hub(commit_message="Model save")
+  File "/workspace/venv/lib/python3.10/site-packages/transformers/trainer.py", line 3698, in push_to_hub
+    return upload_folder(
+  File "/workspace/venv/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/workspace/venv/lib/python3.10/site-packages/huggingface_hub/hf_api.py", line 849, in _inner
+    return fn(self, *args, **kwargs)
+  File "/workspace/venv/lib/python3.10/site-packages/huggingface_hub/hf_api.py", line 3748, in upload_folder
+    commit_info = self.create_commit(
+  File "/workspace/venv/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/workspace/venv/lib/python3.10/site-packages/huggingface_hub/hf_api.py", line 849, in _inner
+    return fn(self, *args, **kwargs)
+  File "/workspace/venv/lib/python3.10/site-packages/huggingface_hub/hf_api.py", line 2934, in create_commit
+    upload_lfs_files(
+  File "/workspace/venv/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/workspace/venv/lib/python3.10/site-packages/huggingface_hub/_commit_api.py", line 397, in upload_lfs_files
+    thread_map(
+  File "/workspace/venv/lib/python3.10/site-packages/tqdm/contrib/concurrent.py", line 69, in thread_map
+    return _executor_map(ThreadPoolExecutor, fn, *iterables, **tqdm_kwargs)
+  File "/workspace/venv/lib/python3.10/site-packages/tqdm/contrib/concurrent.py", line 49, in _executor_map
+    with PoolExecutor(max_workers=max_workers, initializer=tqdm_class.set_lock,
+  File "/usr/lib/python3.10/concurrent/futures/_base.py", line 649, in __exit__
+    self.shutdown(wait=True)
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 235, in shutdown
+    t.join()
+  File "/usr/lib/python3.10/threading.py", line 1096, in join
+    self._wait_for_tstate_lock()
+  File "/usr/lib/python3.10/threading.py", line 1116, in _wait_for_tstate_lock
+    if lock.acquire(block, timeout):

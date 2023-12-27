@@ -1,0 +1,49 @@
+
+  0%|                                                                                                 | 0/3 [00:00<?, ?it/s][WARNING|logging.py:314] 2023-12-27 02:30:24,943 >> You're using a CodeLlamaTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+{'loss': 1.2727, 'learning_rate': 4e-05, 'epoch': 0.33}
+ 33%|█████████████████████████████▋                                                           | 1/3 [00:02<00:04,  2.28s/it][INFO|trainer.py:3158] 2023-12-27 02:30:27,218 >> ***** Running Evaluation *****
+[INFO|trainer.py:3160] 2023-12-27 02:30:27,218 >>   Num examples = 10
+[INFO|trainer.py:3163] 2023-12-27 02:30:27,218 >>   Batch size = 4
+  0%|                                                                                                 | 0/3 [00:00<?, ?it/s]
+{'eval_loss': 1.346835732460022, 'eval_runtime': 664.8795, 'eval_samples_per_second': 0.015, 'eval_steps_per_second': 0.005, 'epoch': 0.33}
+{'train_runtime': 670.5207, 'train_samples_per_second': 0.015, 'train_steps_per_second': 0.004, 'train_loss': 1.2727434635162354, 'epoch': 0.33}
+***** train metrics *****
+  epoch                    =       0.33
+  train_loss               =     1.2727
+  train_runtime            = 0:11:10.52
+  train_samples            =         10
+  train_samples_per_second =      0.015
+  train_steps_per_second   =      0.004
+2023-12-27 02:41:32 - INFO - __main__ - *** Evaluate ***
+***** eval metrics *****
+  epoch                   =       0.33
+  eval_loss               =     1.3468
+  eval_runtime            = 0:00:00.70
+  eval_samples            =         10
+  eval_samples_per_second =      14.09
+  eval_steps_per_second   =      4.227
+2023-12-27 02:41:32 - INFO - __main__ - *** Save model ***
+Training completed. Do not forget to share your model on huggingface.co/models =)
+ 33%|█████████████████████████████▎                                                          | 1/3 [11:07<22:14, 667.21s/it]
+[INFO|trainer.py:3158] 2023-12-27 02:41:32,149 >> ***** Running Evaluation *****
+[INFO|trainer.py:3160] 2023-12-27 02:41:32,149 >>   Num examples = 10
+[INFO|trainer.py:3163] 2023-12-27 02:41:32,150 >>   Batch size = 4
+ 33%|█████████████████████████████▋                                                           | 1/3 [00:00<00:00,  6.22it/s]
+[INFO|trainer.py:2881] 2023-12-27 02:41:32,877 >> Saving model checkpoint to /workspace/s3/hf/experiments/codellama-7b-sft-lora-func-names
+[INFO|tokenization_utils_base.py:2428] 2023-12-27 02:41:33,477 >> tokenizer config file saved in /workspace/s3/hf/experiments/codellama-7b-sft-lora-func-names/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2437] 2023-12-27 02:41:33,479 >> Special tokens file saved in /workspace/s3/hf/experiments/codellama-7b-sft-lora-func-names/special_tokens_map.json
+[INFO|trainer.py:2881] 2023-12-27 02:41:33,510 >> Saving model checkpoint to /workspace/s3/hf/experiments/codellama-7b-sft-lora-func-names
+[INFO|tokenization_utils_base.py:2428] 2023-12-27 02:41:34,118 >> tokenizer config file saved in /workspace/s3/hf/experiments/codellama-7b-sft-lora-func-names/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2437] 2023-12-27 02:41:34,120 >> Special tokens file saved in /workspace/s3/hf/experiments/codellama-7b-sft-lora-func-names/special_tokens_map.json
+adapter_model.safetensors:   0%|                                                       | 16.4k/537M [00:00<1:12:49, 123kB/s]
+Upload 2 LFS files:   0%|                                                                             | 0/2 [00:00<?, ?it/s]
+
+training_args.bin: 100%|███████████████████████████████████████████████████████████████| 4.73k/4.73k [00:00<00:00, 37.7kB/s]
+Upload 2 LFS files: 100%|█████████████████████████████████████████████████████████████████████| 2/2 [00:32<00:00, 16.35s/it]
+[INFO|modelcard.py:452] 2023-12-27 02:42:10,335 >> Dropping the following result as it does not have all the necessary fields:
+{'dataset': {'name': '/workspace/s3/hf/datasets/python_code_cleaned', 'type': '/workspace/s3/hf/datasets/python_code_cleaned'}}
+2023-12-27 02:42:10 - INFO - __main__ - Pushing to hub...
+[INFO|configuration_utils.py:461] 2023-12-27 02:42:10,341 >> Configuration saved in /workspace/s3/hf/experiments/codellama-7b-sft-lora-func-names/config.json
+[INFO|trainer.py:2881] 2023-12-27 02:42:10,341 >> Saving model checkpoint to /workspace/s3/hf/experiments/codellama-7b-sft-lora-func-names
+[INFO|tokenization_utils_base.py:2428] 2023-12-27 02:42:10,971 >> tokenizer config file saved in /workspace/s3/hf/experiments/codellama-7b-sft-lora-func-names/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2437] 2023-12-27 02:42:10,972 >> Special tokens file saved in /workspace/s3/hf/experiments/codellama-7b-sft-lora-func-names/special_tokens_map.json

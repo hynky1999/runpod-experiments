@@ -1,0 +1,47 @@
+  0%|                                                                                                 | 0/2 [00:00<?, ?it/s]/workspace/venv/lib/python3.10/site-packages/trl/trainer/utils.py:570: UserWarning: The dataset reached end and the iterator is reset to the start.
+  warnings.warn("The dataset reached end and the iterator is reset to the start.")
+[WARNING|logging.py:314] 2023-12-27 03:57:11,733 >> You're using a CodeLlamaTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+[rank0]:[2023-12-27 03:57:11,822] [0/0] torch._dynamo.variables.torch: [WARNING] Profiler function <class 'torch.autograd.profiler.record_function'> will be ignored
+ 50%|████████████████████████████████████████████▌                                            | 1/2 [00:30<00:30, 30.73s/it][INFO|trainer.py:2881] 2023-12-27 03:57:40,500 >> Saving model checkpoint to /workspace/s3/hf/experiments/codellama-7b-sft-lora-func-names/checkpoint-1
+[INFO|tokenization_utils_base.py:2428] 2023-12-27 03:57:41,093 >> tokenizer config file saved in /workspace/s3/hf/experiments/codellama-7b-sft-lora-func-names/checkpoint-1/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2437] 2023-12-27 03:57:41,093 >> Special tokens file saved in /workspace/s3/hf/experiments/codellama-7b-sft-lora-func-names/checkpoint-1/special_tokens_map.json
+{'loss': 1.5394, 'learning_rate': 4e-05, 'epoch': 0.0}
+100%|█████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:56<00:00, 27.86s/it][INFO|trainer.py:2881] 2023-12-27 03:58:06,366 >> Saving model checkpoint to /workspace/s3/hf/experiments/codellama-7b-sft-lora-func-names/checkpoint-2
+[INFO|tokenization_utils_base.py:2428] 2023-12-27 03:58:06,962 >> tokenizer config file saved in /workspace/s3/hf/experiments/codellama-7b-sft-lora-func-names/checkpoint-2/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2437] 2023-12-27 03:58:06,962 >> Special tokens file saved in /workspace/s3/hf/experiments/codellama-7b-sft-lora-func-names/checkpoint-2/special_tokens_map.json
+[INFO|trainer.py:3158] 2023-12-27 03:58:08,639 >> ***** Running Evaluation *****
+[INFO|trainer.py:3160] 2023-12-27 03:58:08,640 >>   Num examples = 10
+[INFO|trainer.py:3163] 2023-12-27 03:58:08,640 >>   Batch size = 4
+100%|█████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:59<00:00, 27.86s/it][INFO|trainer.py:1955] 2023-12-27 03:58:09,458 >>
+Training completed. Do not forget to share your model on huggingface.co/models =)
+100%|█████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:59<00:00, 29.84s/it]
+[INFO|trainer.py:3158] 2023-12-27 03:58:09,461 >> ***** Running Evaluation *****
+[INFO|trainer.py:3160] 2023-12-27 03:58:09,461 >>   Num examples = 10
+[INFO|trainer.py:3163] 2023-12-27 03:58:09,461 >>   Batch size = 4
+{'eval_loss': 1.19596529006958, 'eval_runtime': 0.8174, 'eval_samples_per_second': 12.235, 'eval_steps_per_second': 3.67, 'epoch': 0.0}
+{'train_runtime': 61.4575, 'train_samples_per_second': 0.521, 'train_steps_per_second': 0.033, 'train_loss': 1.5384307503700256, 'epoch': 0.0}
+***** train metrics *****
+  epoch                    =        0.0
+  train_loss               =     1.5384
+  train_runtime            = 0:01:01.45
+  train_samples            =      10000
+  train_samples_per_second =      0.521
+  train_steps_per_second   =      0.033
+2023-12-27 03:58:09 - INFO - __main__ - *** Evaluate ***
+***** eval metrics *****
+  epoch                   =        0.0
+  eval_loss               =      1.196
+  eval_runtime            = 0:00:00.51
+  eval_samples            =         10
+  eval_samples_per_second =     19.559
+  eval_steps_per_second   =      5.868
+2023-12-27 03:58:09 - INFO - __main__ - *** Save model ***
+ 33%|█████████████████████████████▋                                                           | 1/3 [00:00<00:00,  4.91it/s]
+[INFO|trainer.py:2881] 2023-12-27 03:58:09,974 >> Saving model checkpoint to /workspace/s3/hf/experiments/codellama-7b-sft-lora-func-names
+[INFO|tokenization_utils_base.py:2428] 2023-12-27 03:58:10,572 >> tokenizer config file saved in /workspace/s3/hf/experiments/codellama-7b-sft-lora-func-names/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2437] 2023-12-27 03:58:10,572 >> Special tokens file saved in /workspace/s3/hf/experiments/codellama-7b-sft-lora-func-names/special_tokens_map.json
+[INFO|trainer.py:2881] 2023-12-27 03:58:10,600 >> Saving model checkpoint to /workspace/s3/hf/experiments/codellama-7b-sft-lora-func-names
+[INFO|tokenization_utils_base.py:2428] 2023-12-27 03:58:11,204 >> tokenizer config file saved in /workspace/s3/hf/experiments/codellama-7b-sft-lora-func-names/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2437] 2023-12-27 03:58:11,204 >> Special tokens file saved in /workspace/s3/hf/experiments/codellama-7b-sft-lora-func-names/special_tokens_map.json
+training_args.bin: 100%|███████████████████████████████████████████████████████████████| 4.73k/4.73k [00:00<00:00, 7.37kB/s]
+adapter_model.safetensors:   2%|█▎                                                      | 12.2M/537M [00:01<00:44, 11.9MB/s]

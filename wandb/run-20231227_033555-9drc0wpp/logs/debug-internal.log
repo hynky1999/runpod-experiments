@@ -1,0 +1,186 @@
+2023-12-27 03:35:55,837 INFO    StreamThr :125385 [internal.py:wandb_internal():86] W&B internal server running at pid: 125385, started at: 2023-12-27 03:35:55.836720
+2023-12-27 03:35:55,839 DEBUG   HandlerThread:125385 [handler.py:handle_request():146] handle_request: status
+2023-12-27 03:35:55,842 INFO    WriterThread:125385 [datastore.py:open_for_write():85] open: /workspace/runpod-experiments/wandb/run-20231227_033555-9drc0wpp/run-9drc0wpp.wandb
+2023-12-27 03:35:55,843 DEBUG   SenderThread:125385 [sender.py:send():382] send: header
+2023-12-27 03:35:55,843 DEBUG   SenderThread:125385 [sender.py:send():382] send: run
+2023-12-27 03:35:56,279 INFO    SenderThread:125385 [dir_watcher.py:__init__():211] watching files in: /workspace/runpod-experiments/wandb/run-20231227_033555-9drc0wpp/files
+2023-12-27 03:35:56,279 INFO    SenderThread:125385 [sender.py:_start_run_threads():1136] run started: 9drc0wpp with start time 1703648155.83564
+2023-12-27 03:35:56,284 DEBUG   HandlerThread:125385 [handler.py:handle_request():146] handle_request: check_version
+2023-12-27 03:35:56,285 DEBUG   SenderThread:125385 [sender.py:send_request():409] send_request: check_version
+2023-12-27 03:35:56,432 DEBUG   HandlerThread:125385 [handler.py:handle_request():146] handle_request: run_start
+2023-12-27 03:35:56,461 DEBUG   HandlerThread:125385 [system_info.py:__init__():32] System info init
+2023-12-27 03:35:56,461 DEBUG   HandlerThread:125385 [system_info.py:__init__():47] System info init done
+2023-12-27 03:35:56,461 INFO    HandlerThread:125385 [system_monitor.py:start():194] Starting system monitor
+2023-12-27 03:35:56,461 INFO    SystemMonitor:125385 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2023-12-27 03:35:56,462 INFO    HandlerThread:125385 [system_monitor.py:probe():214] Collecting system info
+2023-12-27 03:35:56,462 INFO    SystemMonitor:125385 [interfaces.py:start():190] Started cpu monitoring
+2023-12-27 03:35:56,463 INFO    SystemMonitor:125385 [interfaces.py:start():190] Started disk monitoring
+2023-12-27 03:35:56,464 INFO    SystemMonitor:125385 [interfaces.py:start():190] Started gpu monitoring
+2023-12-27 03:35:56,466 INFO    SystemMonitor:125385 [interfaces.py:start():190] Started memory monitoring
+2023-12-27 03:35:56,467 INFO    SystemMonitor:125385 [interfaces.py:start():190] Started network monitoring
+2023-12-27 03:35:56,490 DEBUG   HandlerThread:125385 [system_info.py:probe():196] Probing system
+2023-12-27 03:35:56,493 DEBUG   HandlerThread:125385 [system_info.py:_probe_git():181] Probing git
+2023-12-27 03:35:56,499 DEBUG   HandlerThread:125385 [system_info.py:_probe_git():189] Probing git done
+2023-12-27 03:35:56,499 DEBUG   HandlerThread:125385 [system_info.py:probe():244] Probing system done
+2023-12-27 03:35:56,499 DEBUG   HandlerThread:125385 [system_monitor.py:probe():223] {'os': 'Linux-5.4.0-144-generic-x86_64-with-glibc2.35', 'python': '3.10.12', 'heartbeatAt': '2023-12-27T03:35:56.491007', 'startedAt': '2023-12-27T03:35:55.831453', 'docker': None, 'cuda': None, 'args': ('recipes/codellama-7b-func-names/sft/config_qlora_8bit.yaml',), 'state': 'running', 'program': '/workspace/runpod-experiments/scripts/run_sft.py', 'codePathLocal': 'scripts/run_sft.py', 'codePath': 'scripts/run_sft.py', 'git': {'remote': 'https://github.com/hynky1999/runpod-experiments', 'commit': '1d111f801f3877b264bcd0858f5ebc875251b3e5'}, 'email': None, 'root': '/workspace/runpod-experiments', 'host': '18ec7f3ace40', 'username': 'root', 'executable': '/workspace/venv/bin/python', 'cpu_count': 32, 'cpu_count_logical': 64, 'cpu_freq': {'current': 2283.4787031249994, 'min': 1500.0, 'max': 2350.0}, 'cpu_freq_per_core': [{'current': 1374.778, 'min': 1500.0, 'max': 2350.0}, {'current': 1799.583, 'min': 1500.0, 'max': 2350.0}, {'current': 1496.293, 'min': 1500.0, 'max': 2350.0}, {'current': 1797.915, 'min': 1500.0, 'max': 2350.0}, {'current': 1491.583, 'min': 1500.0, 'max': 2350.0}, {'current': 1723.894, 'min': 1500.0, 'max': 2350.0}, {'current': 1771.833, 'min': 1500.0, 'max': 2350.0}, {'current': 1721.904, 'min': 1500.0, 'max': 2350.0}, {'current': 2270.358, 'min': 1500.0, 'max': 2350.0}, {'current': 1488.473, 'min': 1500.0, 'max': 2350.0}, {'current': 1490.001, 'min': 1500.0, 'max': 2350.0}, {'current': 1520.832, 'min': 1500.0, 'max': 2350.0}, {'current': 1488.935, 'min': 1500.0, 'max': 2350.0}, {'current': 2166.132, 'min': 1500.0, 'max': 2350.0}, {'current': 3352.025, 'min': 1500.0, 'max': 2350.0}, {'current': 1486.216, 'min': 1500.0, 'max': 2350.0}, {'current': 1672.456, 'min': 1500.0, 'max': 2350.0}, {'current': 1671.864, 'min': 1500.0, 'max': 2350.0}, {'current': 3297.743, 'min': 1500.0, 'max': 2350.0}, {'current': 3352.851, 'min': 1500.0, 'max': 2350.0}, {'current': 1796.173, 'min': 1500.0, 'max': 2350.0}, {'current': 1501.384, 'min': 1500.0, 'max': 2350.0}, {'current': 1507.508, 'min': 1500.0, 'max': 2350.0}, {'current': 1797.576, 'min': 1500.0, 'max': 2350.0}, {'current': 1673.645, 'min': 1500.0, 'max': 2350.0}, {'current': 3281.623, 'min': 1500.0, 'max': 2350.0}, {'current': 1485.503, 'min': 1500.0, 'max': 2350.0}, {'current': 3344.358, 'min': 1500.0, 'max': 2350.0}, {'current': 1674.948, 'min': 1500.0, 'max': 2350.0}, {'current': 1671.01, 'min': 1500.0, 'max': 2350.0}, {'current': 2380.736, 'min': 1500.0, 'max': 2350.0}, {'current': 1491.542, 'min': 1500.0, 'max': 2350.0}, {'current': 1477.707, 'min': 1500.0, 'max': 2350.0}, {'current': 1797.274, 'min': 1500.0, 'max': 2350.0}, {'current': 1496.876, 'min': 1500.0, 'max': 2350.0}, {'current': 1799.73, 'min': 1500.0, 'max': 2350.0}, {'current': 1492.194, 'min': 1500.0, 'max': 2350.0}, {'current': 1727.195, 'min': 1500.0, 'max': 2350.0}, {'current': 1878.833, 'min': 1500.0, 'max': 2350.0}, {'current': 1730.289, 'min': 1500.0, 'max': 2350.0}, {'current': 2398.441, 'min': 1500.0, 'max': 2350.0}, {'current': 1485.809, 'min': 1500.0, 'max': 2350.0}, {'current': 1490.434, 'min': 1500.0, 'max': 2350.0}, {'current': 1738.528, 'min': 1500.0, 'max': 2350.0}, {'current': 1487.646, 'min': 1500.0, 'max': 2350.0}, {'current': 2402.732, 'min': 1500.0, 'max': 2350.0}, {'current': 3298.275, 'min': 1500.0, 'max': 2350.0}, {'current': 1481.683, 'min': 1500.0, 'max': 2350.0}, {'current': 2380.985, 'min': 1500.0, 'max': 2350.0}, {'current': 1671.649, 'min': 1500.0, 'max': 2350.0}, {'current': 3349.87, 'min': 1500.0, 'max': 2350.0}, {'current': 3357.326, 'min': 1500.0, 'max': 2350.0}, {'current': 1793.387, 'min': 1500.0, 'max': 2350.0}, {'current': 1498.788, 'min': 1500.0, 'max': 2350.0}, {'current': 1515.826, 'min': 1500.0, 'max': 2350.0}, {'current': 1800.0, 'min': 1500.0, 'max': 2350.0}, {'current': 1675.319, 'min': 1500.0, 'max': 2350.0}, {'current': 2506.405, 'min': 1500.0, 'max': 2350.0}, {'current': 1417.276, 'min': 1500.0, 'max': 2350.0}, {'current': 3341.789, 'min': 1500.0, 'max': 2350.0}, {'current': 1673.481, 'min': 1500.0, 'max': 2350.0}, {'current': 1671.736, 'min': 1500.0, 'max': 2350.0}, {'current': 3345.394, 'min': 1500.0, 'max': 2350.0}, {'current': 1418.437, 'min': 1500.0, 'max': 2350.0}], 'disk': {'/': {'total': 20.0, 'used': 2.5074310302734375}}, 'gpu': 'NVIDIA GeForce RTX 3090', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3090', 'memory_total': 25769803776}], 'memory': {'total': 251.5885009765625}}
+2023-12-27 03:35:56,500 INFO    HandlerThread:125385 [system_monitor.py:probe():224] Finished collecting system info
+2023-12-27 03:35:56,500 INFO    HandlerThread:125385 [system_monitor.py:probe():227] Publishing system info
+2023-12-27 03:35:56,500 DEBUG   HandlerThread:125385 [system_info.py:_save_pip():52] Saving list of pip packages installed into the current environment
+2023-12-27 03:35:56,500 DEBUG   HandlerThread:125385 [system_info.py:_save_pip():68] Saving pip packages done
+2023-12-27 03:35:56,500 INFO    HandlerThread:125385 [system_monitor.py:probe():229] Finished publishing system info
+2023-12-27 03:35:56,505 DEBUG   SenderThread:125385 [sender.py:send():382] send: files
+2023-12-27 03:35:56,505 INFO    SenderThread:125385 [sender.py:_save_file():1392] saving file wandb-metadata.json with policy now
+2023-12-27 03:35:56,511 DEBUG   HandlerThread:125385 [handler.py:handle_request():146] handle_request: stop_status
+2023-12-27 03:35:56,511 DEBUG   SenderThread:125385 [sender.py:send():382] send: telemetry
+2023-12-27 03:35:56,512 DEBUG   SenderThread:125385 [sender.py:send_request():409] send_request: stop_status
+2023-12-27 03:35:56,517 DEBUG   HandlerThread:125385 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-27 03:35:56,822 DEBUG   SenderThread:125385 [sender.py:send():382] send: config
+2023-12-27 03:35:56,823 DEBUG   SenderThread:125385 [sender.py:send():382] send: metric
+2023-12-27 03:35:56,823 DEBUG   SenderThread:125385 [sender.py:send():382] send: telemetry
+2023-12-27 03:35:56,823 DEBUG   SenderThread:125385 [sender.py:send():382] send: metric
+2023-12-27 03:35:56,823 WARNING SenderThread:125385 [sender.py:send_metric():1343] Seen metric with glob (shouldn't happen)
+2023-12-27 03:35:56,823 DEBUG   SenderThread:125385 [sender.py:send():382] send: telemetry
+2023-12-27 03:35:57,157 INFO    wandb-upload_0:125385 [upload_job.py:push():131] Uploaded file /tmp/tmpko_wzmt1wandb/92wo1pnn-wandb-metadata.json
+2023-12-27 03:35:57,282 INFO    Thread-12 :125385 [dir_watcher.py:_on_file_created():271] file/dir created: /workspace/runpod-experiments/wandb/run-20231227_033555-9drc0wpp/files/wandb-metadata.json
+2023-12-27 03:35:57,282 INFO    Thread-12 :125385 [dir_watcher.py:_on_file_created():271] file/dir created: /workspace/runpod-experiments/wandb/run-20231227_033555-9drc0wpp/files/requirements.txt
+2023-12-27 03:35:57,282 INFO    Thread-12 :125385 [dir_watcher.py:_on_file_created():271] file/dir created: /workspace/runpod-experiments/wandb/run-20231227_033555-9drc0wpp/files/output.log
+2023-12-27 03:35:59,281 DEBUG   SenderThread:125385 [sender.py:send():382] send: exit
+2023-12-27 03:35:59,281 INFO    SenderThread:125385 [sender.py:send_exit():589] handling exit code: 1
+2023-12-27 03:35:59,281 INFO    SenderThread:125385 [sender.py:send_exit():591] handling runtime: 2
+2023-12-27 03:35:59,281 INFO    SenderThread:125385 [sender.py:_save_file():1392] saving file wandb-summary.json with policy end
+2023-12-27 03:35:59,282 INFO    SenderThread:125385 [sender.py:send_exit():597] send defer
+2023-12-27 03:35:59,282 DEBUG   HandlerThread:125385 [handler.py:handle_request():146] handle_request: defer
+2023-12-27 03:35:59,282 INFO    Thread-12 :125385 [dir_watcher.py:_on_file_modified():288] file/dir modified: /workspace/runpod-experiments/wandb/run-20231227_033555-9drc0wpp/files/output.log
+2023-12-27 03:35:59,282 INFO    HandlerThread:125385 [handler.py:handle_request_defer():172] handle defer: 0
+2023-12-27 03:35:59,283 DEBUG   SenderThread:125385 [sender.py:send_request():409] send_request: defer
+2023-12-27 03:35:59,283 INFO    SenderThread:125385 [sender.py:send_request_defer():613] handle sender defer: 0
+2023-12-27 03:35:59,283 INFO    SenderThread:125385 [sender.py:transition_state():617] send defer: 1
+2023-12-27 03:35:59,283 DEBUG   HandlerThread:125385 [handler.py:handle_request():146] handle_request: defer
+2023-12-27 03:35:59,283 INFO    HandlerThread:125385 [handler.py:handle_request_defer():172] handle defer: 1
+2023-12-27 03:35:59,283 DEBUG   SenderThread:125385 [sender.py:send_request():409] send_request: defer
+2023-12-27 03:35:59,283 INFO    SenderThread:125385 [sender.py:send_request_defer():613] handle sender defer: 1
+2023-12-27 03:35:59,283 INFO    SenderThread:125385 [sender.py:transition_state():617] send defer: 2
+2023-12-27 03:35:59,283 DEBUG   HandlerThread:125385 [handler.py:handle_request():146] handle_request: defer
+2023-12-27 03:35:59,283 INFO    HandlerThread:125385 [handler.py:handle_request_defer():172] handle defer: 2
+2023-12-27 03:35:59,283 INFO    HandlerThread:125385 [system_monitor.py:finish():203] Stopping system monitor
+2023-12-27 03:35:59,284 INFO    HandlerThread:125385 [interfaces.py:finish():202] Joined cpu monitor
+2023-12-27 03:35:59,284 INFO    HandlerThread:125385 [interfaces.py:finish():202] Joined disk monitor
+2023-12-27 03:35:59,284 DEBUG   SystemMonitor:125385 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2023-12-27 03:35:59,284 DEBUG   SystemMonitor:125385 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2023-12-27 03:35:59,284 DEBUG   SystemMonitor:125385 [system_monitor.py:_start():183] Publishing last batch of metrics
+2023-12-27 03:35:59,293 INFO    HandlerThread:125385 [interfaces.py:finish():202] Joined gpu monitor
+2023-12-27 03:35:59,293 INFO    HandlerThread:125385 [interfaces.py:finish():202] Joined memory monitor
+2023-12-27 03:35:59,293 INFO    HandlerThread:125385 [interfaces.py:finish():202] Joined network monitor
+2023-12-27 03:35:59,293 DEBUG   SenderThread:125385 [sender.py:send_request():409] send_request: defer
+2023-12-27 03:35:59,293 INFO    SenderThread:125385 [sender.py:send_request_defer():613] handle sender defer: 2
+2023-12-27 03:35:59,294 INFO    SenderThread:125385 [sender.py:transition_state():617] send defer: 3
+2023-12-27 03:35:59,294 DEBUG   SenderThread:125385 [sender.py:send():382] send: stats
+2023-12-27 03:35:59,294 DEBUG   HandlerThread:125385 [handler.py:handle_request():146] handle_request: defer
+2023-12-27 03:35:59,294 INFO    HandlerThread:125385 [handler.py:handle_request_defer():172] handle defer: 3
+2023-12-27 03:35:59,294 DEBUG   SenderThread:125385 [sender.py:send_request():409] send_request: defer
+2023-12-27 03:35:59,295 INFO    SenderThread:125385 [sender.py:send_request_defer():613] handle sender defer: 3
+2023-12-27 03:35:59,295 INFO    SenderThread:125385 [sender.py:transition_state():617] send defer: 4
+2023-12-27 03:35:59,295 DEBUG   HandlerThread:125385 [handler.py:handle_request():146] handle_request: defer
+2023-12-27 03:35:59,295 INFO    HandlerThread:125385 [handler.py:handle_request_defer():172] handle defer: 4
+2023-12-27 03:35:59,295 DEBUG   SenderThread:125385 [sender.py:send_request():409] send_request: defer
+2023-12-27 03:35:59,295 INFO    SenderThread:125385 [sender.py:send_request_defer():613] handle sender defer: 4
+2023-12-27 03:35:59,295 INFO    SenderThread:125385 [sender.py:transition_state():617] send defer: 5
+2023-12-27 03:35:59,295 DEBUG   HandlerThread:125385 [handler.py:handle_request():146] handle_request: defer
+2023-12-27 03:35:59,295 INFO    HandlerThread:125385 [handler.py:handle_request_defer():172] handle defer: 5
+2023-12-27 03:35:59,295 DEBUG   SenderThread:125385 [sender.py:send():382] send: summary
+2023-12-27 03:35:59,296 INFO    SenderThread:125385 [sender.py:_save_file():1392] saving file wandb-summary.json with policy end
+2023-12-27 03:35:59,296 DEBUG   SenderThread:125385 [sender.py:send_request():409] send_request: defer
+2023-12-27 03:35:59,296 INFO    SenderThread:125385 [sender.py:send_request_defer():613] handle sender defer: 5
+2023-12-27 03:35:59,296 INFO    SenderThread:125385 [sender.py:transition_state():617] send defer: 6
+2023-12-27 03:35:59,296 DEBUG   HandlerThread:125385 [handler.py:handle_request():146] handle_request: defer
+2023-12-27 03:35:59,296 INFO    HandlerThread:125385 [handler.py:handle_request_defer():172] handle defer: 6
+2023-12-27 03:35:59,296 DEBUG   SenderThread:125385 [sender.py:send_request():409] send_request: defer
+2023-12-27 03:35:59,296 INFO    SenderThread:125385 [sender.py:send_request_defer():613] handle sender defer: 6
+2023-12-27 03:35:59,300 DEBUG   HandlerThread:125385 [handler.py:handle_request():146] handle_request: status_report
+2023-12-27 03:35:59,575 INFO    SenderThread:125385 [sender.py:transition_state():617] send defer: 7
+2023-12-27 03:35:59,576 DEBUG   HandlerThread:125385 [handler.py:handle_request():146] handle_request: defer
+2023-12-27 03:35:59,576 INFO    HandlerThread:125385 [handler.py:handle_request_defer():172] handle defer: 7
+2023-12-27 03:35:59,576 DEBUG   SenderThread:125385 [sender.py:send_request():409] send_request: defer
+2023-12-27 03:35:59,576 INFO    SenderThread:125385 [sender.py:send_request_defer():613] handle sender defer: 7
+2023-12-27 03:36:00,281 DEBUG   HandlerThread:125385 [handler.py:handle_request():146] handle_request: poll_exit
+2023-12-27 03:36:00,282 INFO    Thread-12 :125385 [dir_watcher.py:_on_file_modified():288] file/dir modified: /workspace/runpod-experiments/wandb/run-20231227_033555-9drc0wpp/files/config.yaml
+2023-12-27 03:36:00,283 INFO    Thread-12 :125385 [dir_watcher.py:_on_file_created():271] file/dir created: /workspace/runpod-experiments/wandb/run-20231227_033555-9drc0wpp/files/wandb-summary.json
+2023-12-27 03:36:00,850 INFO    SenderThread:125385 [sender.py:transition_state():617] send defer: 8
+2023-12-27 03:36:00,850 DEBUG   SenderThread:125385 [sender.py:send_request():409] send_request: poll_exit
+2023-12-27 03:36:00,851 DEBUG   HandlerThread:125385 [handler.py:handle_request():146] handle_request: defer
+2023-12-27 03:36:00,851 INFO    HandlerThread:125385 [handler.py:handle_request_defer():172] handle defer: 8
+2023-12-27 03:36:00,852 DEBUG   SenderThread:125385 [sender.py:send_request():409] send_request: defer
+2023-12-27 03:36:00,852 INFO    SenderThread:125385 [sender.py:send_request_defer():613] handle sender defer: 8
+2023-12-27 03:36:00,852 INFO    SenderThread:125385 [job_builder.py:build():298] Attempting to build job artifact
+2023-12-27 03:36:00,853 INFO    SenderThread:125385 [job_builder.py:_get_source_type():428] is repo sourced job
+2023-12-27 03:36:00,881 INFO    SenderThread:125385 [job_builder.py:build():404] adding wandb-job metadata file
+2023-12-27 03:36:00,894 INFO    SenderThread:125385 [sender.py:transition_state():617] send defer: 9
+2023-12-27 03:36:00,895 DEBUG   HandlerThread:125385 [handler.py:handle_request():146] handle_request: defer
+2023-12-27 03:36:00,895 DEBUG   SenderThread:125385 [sender.py:send():382] send: artifact
+2023-12-27 03:36:00,895 INFO    HandlerThread:125385 [handler.py:handle_request_defer():172] handle defer: 9
+2023-12-27 03:36:01,282 DEBUG   HandlerThread:125385 [handler.py:handle_request():146] handle_request: poll_exit
+2023-12-27 03:36:01,283 INFO    Thread-12 :125385 [dir_watcher.py:_on_file_modified():288] file/dir modified: /workspace/runpod-experiments/wandb/run-20231227_033555-9drc0wpp/files/output.log
+2023-12-27 03:36:01,638 INFO    SenderThread:125385 [sender.py:send_artifact():1470] sent artifact job-https___github.com_hynky1999_runpod-experiments_scripts_run_sft.py - {'id': 'QXJ0aWZhY3Q6Njc1Mjk4ODA0', 'state': 'COMMITTED', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjEyNTg1MDAzMA==', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6Njc1MzAzNTE1', 'versionIndex': 8}}}
+2023-12-27 03:36:01,638 DEBUG   SenderThread:125385 [sender.py:send_request():409] send_request: defer
+2023-12-27 03:36:01,638 INFO    SenderThread:125385 [sender.py:send_request_defer():613] handle sender defer: 9
+2023-12-27 03:36:01,638 INFO    SenderThread:125385 [dir_watcher.py:finish():358] shutting down directory watcher
+2023-12-27 03:36:02,284 INFO    SenderThread:125385 [dir_watcher.py:finish():388] scan: /workspace/runpod-experiments/wandb/run-20231227_033555-9drc0wpp/files
+2023-12-27 03:36:02,284 INFO    SenderThread:125385 [dir_watcher.py:finish():402] scan save: /workspace/runpod-experiments/wandb/run-20231227_033555-9drc0wpp/files/config.yaml config.yaml
+2023-12-27 03:36:02,284 INFO    SenderThread:125385 [dir_watcher.py:finish():402] scan save: /workspace/runpod-experiments/wandb/run-20231227_033555-9drc0wpp/files/requirements.txt requirements.txt
+2023-12-27 03:36:02,288 INFO    SenderThread:125385 [dir_watcher.py:finish():402] scan save: /workspace/runpod-experiments/wandb/run-20231227_033555-9drc0wpp/files/wandb-metadata.json wandb-metadata.json
+2023-12-27 03:36:02,288 INFO    SenderThread:125385 [dir_watcher.py:finish():402] scan save: /workspace/runpod-experiments/wandb/run-20231227_033555-9drc0wpp/files/output.log output.log
+2023-12-27 03:36:02,288 INFO    SenderThread:125385 [dir_watcher.py:finish():402] scan save: /workspace/runpod-experiments/wandb/run-20231227_033555-9drc0wpp/files/wandb-summary.json wandb-summary.json
+2023-12-27 03:36:02,289 INFO    SenderThread:125385 [sender.py:transition_state():617] send defer: 10
+2023-12-27 03:36:02,289 DEBUG   SenderThread:125385 [sender.py:send_request():409] send_request: poll_exit
+2023-12-27 03:36:02,294 DEBUG   HandlerThread:125385 [handler.py:handle_request():146] handle_request: defer
+2023-12-27 03:36:02,295 INFO    HandlerThread:125385 [handler.py:handle_request_defer():172] handle defer: 10
+2023-12-27 03:36:02,298 DEBUG   SenderThread:125385 [sender.py:send_request():409] send_request: defer
+2023-12-27 03:36:02,299 INFO    SenderThread:125385 [sender.py:send_request_defer():613] handle sender defer: 10
+2023-12-27 03:36:02,299 INFO    SenderThread:125385 [file_pusher.py:finish():175] shutting down file pusher
+2023-12-27 03:36:02,658 INFO    wandb-upload_1:125385 [upload_job.py:push():131] Uploaded file /workspace/runpod-experiments/wandb/run-20231227_033555-9drc0wpp/files/requirements.txt
+2023-12-27 03:36:02,815 INFO    wandb-upload_0:125385 [upload_job.py:push():131] Uploaded file /workspace/runpod-experiments/wandb/run-20231227_033555-9drc0wpp/files/config.yaml
+2023-12-27 03:36:03,026 INFO    wandb-upload_2:125385 [upload_job.py:push():131] Uploaded file /workspace/runpod-experiments/wandb/run-20231227_033555-9drc0wpp/files/output.log
+2023-12-27 03:36:03,129 INFO    wandb-upload_3:125385 [upload_job.py:push():131] Uploaded file /workspace/runpod-experiments/wandb/run-20231227_033555-9drc0wpp/files/wandb-summary.json
+2023-12-27 03:36:03,329 INFO    Thread-11 (_thread_body):125385 [sender.py:transition_state():617] send defer: 11
+2023-12-27 03:36:03,330 DEBUG   HandlerThread:125385 [handler.py:handle_request():146] handle_request: defer
+2023-12-27 03:36:03,330 INFO    HandlerThread:125385 [handler.py:handle_request_defer():172] handle defer: 11
+2023-12-27 03:36:03,331 DEBUG   SenderThread:125385 [sender.py:send_request():409] send_request: defer
+2023-12-27 03:36:03,331 INFO    SenderThread:125385 [sender.py:send_request_defer():613] handle sender defer: 11
+2023-12-27 03:36:03,331 INFO    SenderThread:125385 [file_pusher.py:join():181] waiting for file pusher
+2023-12-27 03:36:03,331 INFO    SenderThread:125385 [sender.py:transition_state():617] send defer: 12
+2023-12-27 03:36:03,331 DEBUG   HandlerThread:125385 [handler.py:handle_request():146] handle_request: defer
+2023-12-27 03:36:03,331 INFO    HandlerThread:125385 [handler.py:handle_request_defer():172] handle defer: 12
+2023-12-27 03:36:03,332 DEBUG   SenderThread:125385 [sender.py:send_request():409] send_request: defer
+2023-12-27 03:36:03,332 INFO    SenderThread:125385 [sender.py:send_request_defer():613] handle sender defer: 12
+2023-12-27 03:36:03,332 INFO    SenderThread:125385 [file_stream.py:finish():595] file stream finish called
+2023-12-27 03:36:03,514 INFO    SenderThread:125385 [file_stream.py:finish():599] file stream finish is done
+2023-12-27 03:36:03,515 INFO    SenderThread:125385 [sender.py:transition_state():617] send defer: 13
+2023-12-27 03:36:03,515 DEBUG   HandlerThread:125385 [handler.py:handle_request():146] handle_request: defer
+2023-12-27 03:36:03,515 INFO    HandlerThread:125385 [handler.py:handle_request_defer():172] handle defer: 13
+2023-12-27 03:36:03,515 DEBUG   SenderThread:125385 [sender.py:send_request():409] send_request: defer
+2023-12-27 03:36:03,515 INFO    SenderThread:125385 [sender.py:send_request_defer():613] handle sender defer: 13
+2023-12-27 03:36:03,516 INFO    SenderThread:125385 [sender.py:transition_state():617] send defer: 14
+2023-12-27 03:36:03,516 DEBUG   HandlerThread:125385 [handler.py:handle_request():146] handle_request: defer
+2023-12-27 03:36:03,516 INFO    HandlerThread:125385 [handler.py:handle_request_defer():172] handle defer: 14
+2023-12-27 03:36:03,517 DEBUG   SenderThread:125385 [sender.py:send():382] send: final
+2023-12-27 03:36:03,517 DEBUG   SenderThread:125385 [sender.py:send():382] send: footer
+2023-12-27 03:36:03,517 DEBUG   SenderThread:125385 [sender.py:send_request():409] send_request: defer
+2023-12-27 03:36:03,517 INFO    SenderThread:125385 [sender.py:send_request_defer():613] handle sender defer: 14
+2023-12-27 03:36:03,518 DEBUG   HandlerThread:125385 [handler.py:handle_request():146] handle_request: poll_exit
+2023-12-27 03:36:03,518 DEBUG   SenderThread:125385 [sender.py:send_request():409] send_request: poll_exit
+2023-12-27 03:36:03,519 DEBUG   HandlerThread:125385 [handler.py:handle_request():146] handle_request: server_info
+2023-12-27 03:36:03,520 DEBUG   SenderThread:125385 [sender.py:send_request():409] send_request: server_info
+2023-12-27 03:36:03,523 DEBUG   HandlerThread:125385 [handler.py:handle_request():146] handle_request: get_summary
+2023-12-27 03:36:03,524 DEBUG   HandlerThread:125385 [handler.py:handle_request():146] handle_request: sampled_history
+2023-12-27 03:36:03,525 DEBUG   HandlerThread:125385 [handler.py:handle_request():146] handle_request: internal_messages
+2023-12-27 03:36:03,525 DEBUG   HandlerThread:125385 [handler.py:handle_request():146] handle_request: job_info
+2023-12-27 03:36:03,661 DEBUG   SenderThread:125385 [sender.py:send_request():409] send_request: job_info
+2023-12-27 03:36:03,661 INFO    MainThread:125385 [wandb_run.py:_footer_history_summary_info():3837] rendering history
+2023-12-27 03:36:03,661 INFO    MainThread:125385 [wandb_run.py:_footer_history_summary_info():3869] rendering summary
+2023-12-27 03:36:03,662 INFO    MainThread:125385 [wandb_run.py:_footer_sync_info():3796] logging synced files
+2023-12-27 03:36:03,662 DEBUG   HandlerThread:125385 [handler.py:handle_request():146] handle_request: shutdown
+2023-12-27 03:36:03,662 INFO    HandlerThread:125385 [handler.py:finish():866] shutting down handler
+2023-12-27 03:36:04,526 INFO    WriterThread:125385 [datastore.py:close():294] close: /workspace/runpod-experiments/wandb/run-20231227_033555-9drc0wpp/run-9drc0wpp.wandb
+2023-12-27 03:36:04,661 INFO    SenderThread:125385 [sender.py:finish():1548] shutting down sender
+2023-12-27 03:36:04,661 INFO    SenderThread:125385 [file_pusher.py:finish():175] shutting down file pusher
+2023-12-27 03:36:04,661 INFO    SenderThread:125385 [file_pusher.py:join():181] waiting for file pusher
