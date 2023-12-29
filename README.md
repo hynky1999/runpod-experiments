@@ -38,8 +38,8 @@ with preferences. But it would certainly be benfical
 - For batch size I tried to set the max that will get on gpu, while targetting effective batch size of 32 (using grad accumulation)
 - Lastly I used packing in both cases and training on inputs in case of Axoltl as it has super easy set-up there.
 
-
-
+## Environment
+- all the work was done on runpod with RTX3090
 
 ## Training Logs
 https://wandb.ai/hynky/func_name_code_llama?workspace=user-kydlicek-hynek
