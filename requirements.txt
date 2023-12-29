@@ -13,3 +13,4 @@ accelerate
 huggingface-hub
 randomname
 python-dotenv
+nltk
